@@ -30,7 +30,7 @@ overRouter.post("/over/add",async (req,res)=>{
     let _over =new overModel({
     
         "overNo" : req.body.overNo,
-        "run":req.body.run,
+        "totalRun":req.body.run,
         "bowler": req.body.bowler,
         "batTeam":req.body.batTeam,
        

@@ -1,5 +1,4 @@
 var express = require("express")
-var parser = require("body-parser")
 var mongoose =require('mongoose')
 var morgan =require('morgan')
 const bodyParser = require("body-parser")
