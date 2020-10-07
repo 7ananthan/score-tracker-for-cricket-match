@@ -15,6 +15,16 @@ overRouter.get("/over/viewall",async(req,res)=>{
 })
 overRouter.get("/bowler/economy",async(req,res)=>{
 
+    // let incompleteOver=  await overModel.find(
+    //     {
+    //         "bowler.name":req.body.bowler,
+    //         "ballDescription.5":{"$exists":false}
+    //     }
+       
+    // )
+    // res.json(incompleteOver)
+
+
         let ballCount=  await overModel.aggregate(
             [
                 {
