@@ -51,7 +51,7 @@ module.exports.bowlerEconomy = async(req,res)=>{
 
 module.exports.bowlerData = async(req,res)=>{
     try {
-        var result = await overModel.find();
+        var result = await overModel.find({"bowler.name": req.body.name});
         res.send(result);        
     } catch (error) {
         console.log(error);
