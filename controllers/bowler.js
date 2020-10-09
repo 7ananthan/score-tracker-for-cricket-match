@@ -48,6 +48,25 @@ module.exports.bowlerEconomy = async(req,res)=>{
                
    
 }
+module.exports.bowlerWicket= async(req,res)=>{
+
+    let over =await overModel.find(
+         {
+             "bowler.name":req.body.bowler
+                },
+     )
+     var wicket =0
+     for (var index = 0; index < over.length; index++) {        
+         for (var ballIndex = 0; ballIndex < over[index].ballDescription.length; ballIndex++) {
+             if (over[index].ballDescription[ballIndex].wicket==true) {
+                 wicket++
+             }
+         }    
+     
+     }
+   
+     res.json(wicket)  
+    }
 
 module.exports.bowlerData = async(req,res)=>{
     try {

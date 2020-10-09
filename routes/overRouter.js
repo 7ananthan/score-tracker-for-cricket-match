@@ -18,6 +18,9 @@ overRouter.get("/test",test.test)
 //Returns bowler Economy [input :bowler]
 overRouter.get("/bowler/economy",bowler.bowlerEconomy)
 
+//Returns bowler Economy [input :bowler]
+overRouter.get("/bowler/wicket",bowler.bowlerWicket)
+
 //api to input ball description [input :overNo ,ballDescription {}]
 overRouter.post("/over/update",over.update)
 
