@@ -10,7 +10,10 @@ const match =require('../controllers/match')
 overRouter.get("/bowler/data",bowler.bowlerData)
 
 //Returns team score and runrate [input :teamName]
-overRouter.get("/team/run",match.totalruns)
+overRouter.get("/team/run",match.totalRuns)
+
+//Returns team score and runrate [input :teamName]
+overRouter.get("/team/extra",match.extraRuns)
 
 //for fun
 overRouter.get("/test",test.test)
